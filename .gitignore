@@ -1,0 +1,4 @@
+# Ignora qualquer pasta chamada 'node_modules' em qualquer lugar
+**/node_modules/
+
+**.env

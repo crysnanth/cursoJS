@@ -1,0 +1,25 @@
+<%- include('./includes/head') %>
+
+<section class="container">
+    <h1>
+        <!-- essa variável veio do controller -->
+        <!-- a forma com = não formata o html, ou seja, vai mostrar tudo pro usuário -->
+        <%= title %>
+        <br>
+        <!-- a forma com - já formata o html -->
+        <%- title %>
+
+        <% for (const num of nums) { %>
+            <p><%= num %></p>
+        <% } %>
+
+        <form action="/" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <label for="">Cliente:</label>
+            <input type="text" name="cliente" id="">
+            <button type="submit">Enviar</button>
+        </form>
+    </h1>
+</section>
+
+<%- include('./includes/footer') %>

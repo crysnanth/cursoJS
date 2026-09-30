@@ -1,0 +1,39 @@
+{
+    "name": "aula15",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js --ignore public --ignore frontend",
+        "dev": "webpack -w"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "connect-flash": "^0.1.1",
+        "connect-mongo": "^6.0.0",
+        "core-js": "^3.50.0",
+        "csurf": "^1.11.0",
+        "dotenv": "^18.0.4",
+        "ejs": "^6.0.1",
+        "express": "^5.2.1",
+        "express-session": "^1.19.0",
+        "helmet": "^8.3.0",
+        "mongoose": "^9.10.2",
+        "regenerator-runtime": "^0.14.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^8.0.6",
+        "@babel/core": "^8.0.6",
+        "@babel/preset-env": "^8.0.6",
+        "babel-loader": "^10.1.1",
+        "css-loader": "^7.1.5",
+        "nodemon": "^3.1.14",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.111.1",
+        "webpack-cli": "^7.2.3"
+    }
+}

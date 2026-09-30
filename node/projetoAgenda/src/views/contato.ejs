@@ -1,0 +1,81 @@
+<%- include('./includes/head') %> <%- include('./includes/nav') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 mt-3">
+            <h1 class="text-center">Contato</h1>
+            <p class="text-center">Crie ou edite seus contatos</p>
+
+            <%- include('includes/messages') %>
+
+            <div>
+                <% if (contato._id) { %>
+                    <form action="/contato/edit/<%= contato._id %>" method="post" id="form-contato">
+                <% } else { %>
+                    <form action="/contato/register" method="post" id="form-contato">
+                <% }  %>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                    <div class="mb-3">
+                        <label for="exampleInputNome1" class="form-label"
+                            >Nome</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control input-validar"
+                            id="exampleInputNome1"
+                            aria-describedby="nomeHelp"
+                            name="nome"
+                            value="<%= contato.nome %>"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputSobrenome1" class="form-label"
+                            >Sobrenome</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control input-validar"
+                            id="exampleInputSobrenome1"
+                            aria-describedby="sobrenomeHelp"
+                            name="sobrenome"
+                            value="<%= contato.sobrenome %>"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            class="form-control input-validar"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            name="email"
+                            value="<%= contato.email %>"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputTelefone1" class="form-label"
+                            >Telefone</label
+                        >
+                        <input
+                            type="tel"
+                            class="form-control input-validar"
+                            id="exampleInputTelefone1"
+                            aria-describedby="telefoneHelp"
+                            name="telefone"
+                            value="<%= contato.telefone %>"
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+<%- include('./includes/footer') %>
